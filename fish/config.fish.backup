@@ -1,0 +1,4 @@
+load_nvm
+export PATH="/usr/local/bin:$PATH"
+export PATH="/Users/mujingtsai/solana-release/bin:$PATH"
+set PATH $PATH "$HOME/.bin"
