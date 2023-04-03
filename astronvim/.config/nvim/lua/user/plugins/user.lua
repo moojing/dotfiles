@@ -10,74 +10,22 @@ return {
   --   end,
   -- },
   {
-    "rebelot/kanagawa.nvim",
+    "ruifm/gitlinker.nvim",
     lazy = false,
-    config = function()
-      require('kanagawa').setup({})
-    end
+    config = function() require("gitlinker").setup() end,
   },
-  {
-    'ruifm/gitlinker.nvim',
-    lazy = false,
-    config = function()
-      require "gitlinker".setup()
-    end
-  },
-  { 'github/copilot.vim',             lazy = false },
-  { 'ntpeters/vim-better-whitespace', lazy = false },
-  { 'imsnif/kdl.vim',                 lazy = false },
-  {
-    "folke/zen-mode.nvim",
-    lazy = false,
-    config = function()
-      require("zen-mode").setup {
-        window = {
-          backdrop = 0.95,
-          width = .65,
-          height = 1,
-          options = {
-            number = false,
-            relativenumber = false,
-            cursorcolumn = false,
-          }
-        },
-        plugins = {
-          options = {
-            enabled = true,
-            ruler = false,   -- disables the ruler text in the cmd line area
-            showcmd = false, -- disables the command in the last line of the screen
-          },
-        },
-        on_open = function(win)
-          vim.cmd("IndentBlanklineDisable")
-          vim.o.laststatus = 0
-          vim.o.cmdheight = 1
-        end,
-        on_close = function(win)
-          vim.cmd("IndentBlanklineEnable")
-          vim.o.laststatus = 2
-          vim.o.cmdheight = 0
-        end
-      }
-    end
-  },
-  {
-    "kylechui/nvim-surround",
-    version = "*",      -- Use for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy", -- Load on specific events
-    config = function()
-      require("nvim-surround").setup {}
-    end
-  },
-  { "mg979/vim-visual-multi",           event = "VeryLazy", },
+  { "github/copilot.vim",               lazy = false },
+  { "ntpeters/vim-better-whitespace",   lazy = false },
+  { "imsnif/kdl.vim",                   lazy = false },
+  { "mg979/vim-visual-multi",           event = "VeryLazy" },
   { "windwp/nvim-spectre",              event = "VeryLazy" },
   { "nyoom-engineering/oxocarbon.nvim", lazy = false },
   {
     "MaximilianLloyd/ascii.nvim",
     lazy = false,
     dependencies = {
-      "MunifTanjim/nui.nvim"
-    }
+      "MunifTanjim/nui.nvim",
+    },
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -85,54 +33,31 @@ return {
       "nvim-telescope/telescope-media-files.nvim",
       {
         "nvim-telescope/telescope-frecency.nvim",
-        dependencies = { "kkharji/sqlite.lua" }
+        dependencies = { "kkharji/sqlite.lua" },
       },
-      "LukasPietzschmann/telescope-tabs"
+      "LukasPietzschmann/telescope-tabs",
     },
     -- the first parameter is the plugin specification
     -- the second is the table of options as set up in Lazy with the `opts` key
     config = function(plugin, opts)
       -- run the core AstroNvim configuration function with the options table
-      require("plugins.configs.telescope")(plugin, opts)
+      require "plugins.configs.telescope" (plugin, opts)
 
       -- require telescope and load extensions as necessary
       local telescope = require "telescope"
       telescope.load_extension "media_files"
       telescope.load_extension "frecency"
-      require 'telescope-tabs'.setup {
+      require("telescope-tabs").setup {
         -- Your custom config :^)
       }
     end,
   },
-  { 'sindrets/diffview.nvim', event = "VeryLazy", dependencies = 'nvim-lua/plenary.nvim' },
+  { "sindrets/diffview.nvim", event = "VeryLazy", dependencies = "nvim-lua/plenary.nvim" },
   {
-    "jackMort/ChatGPT.nvim",
-    config = function()
-      require("chatgpt").setup({
-        -- optional configuration
-        openai_params = {
-            model = "gpt-3.5-turbo",
-            frequency_penalty = 0,
-            presence_penalty = 0,
-            max_tokens = 300,
-            temperature = 0,
-            top_p = 1,
-            n = 1,
-        }
-      })
-    end,
+    "preservim/vim-markdown",
     event = "VeryLazy",
     dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
+      "godlygeek/tabular",
     },
   },
-  {
-    'preservim/vim-markdown',
-    event = "VeryLazy",
-    dependencies = {
-      'godlygeek/tabular'
-    }
-  }
 }
