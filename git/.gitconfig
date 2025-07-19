@@ -1,0 +1,75 @@
+[include]
+    path = ~/.gitconfig.private
+
+[alias]
+    s = status
+    br = branch
+    co = checkout
+    ci = commit
+    di = diff
+    lg = log
+    gra = "log -a --decorate --graph --oneline"
+    sls = "stash list"
+    pushd = "push -u origin HEAD"
+    brd = "branch -D"
+    brm = "branch -m"
+    unstage = "reset HEAD --"
+    last = "log -1 HEAD"
+    amend = "commit --amend"
+    undo = "reset --soft HEAD~1"
+
+[core]
+    excludesfile = ~/.gitignore
+    editor = vim
+
+[commit]
+    template = ~/.gitmessage
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+
+[http]
+    postBuffer = 157286400
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+# Settings for better usage with AI agents
+[diff]
+    algorithm = histogram
+    renames = true
+    renameLimit = 999999
+
+[log]
+    abbrevCommit = true
+    decorate = true
+
+[merge]
+    conflictstyle = diff3
+
+[color]
+    ui = auto
+
+[push]
+    default = simple
+
+[branch]
+    autosetupmerge = always
+    autosetuprebase = always
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red

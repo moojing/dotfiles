@@ -1,0 +1,9 @@
+[user]
+	name = default_user
+	email = example@gmail.com
+
+
+[difftool "sourcetree"]
+[mergetool "sourcetree"]
+[credential]
+	
