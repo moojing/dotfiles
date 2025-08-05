@@ -30,6 +30,12 @@ require "polish"
 
  -- custom settings
  
+-- tnoremap: terminal mode mapping
+vim.keymap.set('t', '<C-w>h', [[<C-\><C-n><C-w>h]])
+vim.keymap.set('t', '<C-w>j', [[<C-\><C-n><C-w>j]])
+vim.keymap.set('t', '<C-w>k', [[<C-\><C-n><C-w>k]])
+vim.keymap.set('t', '<C-w>l', [[<C-\><C-n><C-w>l]])
+
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.statuscolumn = "%s%=%{v:relnum?v:relnum:v:lnum}  "
@@ -62,6 +68,7 @@ vim.api.nvim_create_autocmd("CursorHold", {
   end,
 })
 
+-- open svg in finder
 vim.keymap.set("n", "<leader>sf", function()
   vim.fn.jobstart({ "open", "-R", vim.fn.expand("%") }, { detach = true })
 end, { desc = "Reveal SVG in Finder" })

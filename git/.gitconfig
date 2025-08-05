@@ -1,10 +1,10 @@
 [include]
     path = ~/.gitconfig.private
-
 [alias]
     s = status
     br = branch
     co = checkout
+    gco = checkout
     ci = commit
     di = diff
     lg = log
