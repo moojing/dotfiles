@@ -19,16 +19,17 @@ Thumbs.db
 *~
 
 # Claude sensitive files
-claude/logs/
-claude/shell-snapshots/
-claude/backups/
-claude/projects/
-claude/todos/
-claude/.superclaude-metadata.json
-claude/statsig/
-claude/ide/*.lock
-claude/config/notification_states.json
-claude/settings.json
+claude-config/.claude/logs/
+claude-config/.claude/shell-snapshots/
+claude-config/.claude/backups/
+claude-config/.claude/projects/
+claude-config/.claude/todos/
+claude-config/.claude/.superclaude-metadata.json
+claude-config/.claude/statsig/
+claude-config/.claude/ide/*.lock
+claude-config/.claude/statsig/*.json
+claude-config/.claude/config/notification_states.json
+claude-config/.claude/settings.json
 **/*session*
 **/*token*
 **/*key*
