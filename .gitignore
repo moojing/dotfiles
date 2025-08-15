@@ -17,3 +17,20 @@ Thumbs.db
 # OS specific
 *.swp
 *~
+
+# Claude sensitive files
+claude/logs/
+claude/shell-snapshots/
+claude/backups/
+claude/projects/
+claude/todos/
+claude/.superclaude-metadata.json
+claude/statsig/
+claude/ide/*.lock
+claude/config/notification_states.json
+claude/settings.json
+**/*session*
+**/*token*
+**/*key*
+**/*secret*
+**/*auth*
