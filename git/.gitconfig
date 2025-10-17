@@ -45,6 +45,7 @@
     algorithm = histogram
     renames = true
     renameLimit = 999999
+	tool = p4merge
 
 [log]
     abbrevCommit = true
@@ -52,6 +53,7 @@
 
 [merge]
     conflictstyle = diff3
+	tool = p4merge
 
 [color]
     ui = auto
@@ -73,3 +75,21 @@
     added = green
     changed = yellow
     untracked = red
+[user]
+	name = mujing.tsai
+	email = mujing.tsai@eeze.com
+[difftool "meld"]
+	path = /opt/homebrew/bin/meld
+[difftool "opendiff"]
+	cmd = /usr/bin/opendiff \"$LOCAL\" \"$REMOTE\" \n  -merge \"$MERGED\"
+[mergetool "opendiff"]
+	cmd = /usr/bin/opendiff \"$LOCAL\" \"$REMOTE\" \n  -ancestor \"$BASE\" -merge \"$MERGED\"
+[mergetool]
+	prompt = false
+[difftool "p4merge"]
+	cmd = p4merge \"$LOCAL\" \"$REMOTE\"
+[mergetool "p4merge"]
+	cmd = p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = false
+[coderabbit]
+	machineId = cli/fbac904549ec4e608cad9dd525566fef
