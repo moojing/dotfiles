@@ -1,10 +1,8 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(mv:*)",
-      "Bash(tree:*)"
-    ],
-    "deny": [],
-    "ask": []
-  }
+  "enabledMcpjsonServers": [
+    "Framelink Figma MCP",
+    "context7",
+    "mcp-deepwiki",
+    "playwright"
+  ]
 }
