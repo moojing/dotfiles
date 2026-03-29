@@ -33,6 +33,7 @@
 
 [http]
     postBuffer = 157286400
+	sslVerify = false
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
@@ -93,3 +94,7 @@
 	trustExitCode = false
 [coderabbit]
 	machineId = cli/fbac904549ec4e608cad9dd525566fef
+[http "https://code-dev.asia.tc/"]
+	sslVerify = false
+[credential]
+	helper = osxkeychain

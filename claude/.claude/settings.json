@@ -3,16 +3,5 @@
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1
   },
   "hooks": {
-      "Stop": [
-        {
-          "matcher": "Bash",
-          "hooks": [
-            {
-              "type": "command",
-              "command": "open raycast://extensions/raycast/raycast/confetti"
-            }
-          ]
-        }
-      ]
     }
 }
