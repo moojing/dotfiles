@@ -13,3 +13,4 @@ if test -f $HOME/google-cloud-sdk/path.fish.inc
 end
 
 oh-my-posh --init --shell fish --config (brew --prefix oh-my-posh)/themes/json.omp.json | source
+export PATH="$HOME/.local/bin:$PATH"
