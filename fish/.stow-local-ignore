@@ -1,0 +1,12 @@
+# NOTE: each line is an anchored Perl regex (matched against basename and the
+# path relative to the package root), NOT a shell glob.
+.*\.log
+\.cache
+node_modules
+\.git
+.*\.org
+
+# OrbStack injects these completions as absolute symlinks; let stow skip them
+# so `stow fish` / `stow --restow fish` doesn't abort on a conflict.
+docker\.fish
+kubectl\.fish
