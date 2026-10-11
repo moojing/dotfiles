@@ -1,33 +1,92 @@
-# Text-based UI library
-brew "ncurses"
+tap "anomalyco/tap"
+tap "atlassian/acli"
+tap "jandedobbeleer/oh-my-posh"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# Fast and simple Node.js version manager
+brew "fnm"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Open-source GitLab command-line tool
+brew "glab"
 # Configurable static site generator
 brew "hugo"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
-# C library of Git core methods that is re-entrant and linkable
-brew "libgit2"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim", args: ["HEAD"]
-# Prompt theme engine for any shell
-brew "oh-my-posh"
-# Fast, disk space efficient package manager
-brew "pnpm"
-# Library for command-line editing
-brew "readline"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3", link: true
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
+# Development kit for the Java programming language
+brew "openjdk"
+# Java-based project management
+brew "maven"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
+# Text-based UI library
+brew "ncurses"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Library for command-line editing
+brew "readline"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Development kit for the Java programming language
+brew "openjdk@17"
+# Development kit for the Java programming language
+brew "openjdk@21"
+# Development kit for the Java programming language
+brew "openjdk@25"
+# Fast, disk space efficient package manager
+brew "pnpm"
+# Rsync for cloud storage
+brew "rclone"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Text interface for Git repositories
+brew "tig"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Tracks most-used directories to make cd smarter
+brew "z"
+# Suite of barcodes-reading tools
+brew "zbar"
 # General-purpose lossless data-compression library
 brew "zlib"
-# Transcribes and translates audio
-cask "buzz"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode", trusted: true
+# Enable Windows-like alt-tab
+cask "alt-tab"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Menu bar manager
 cask "jordanbaird-ice"
-# Smart card libraries and utilities
-cask "opensc-app"
+# Visual diff and merge tool
+cask "meld"
+# Open source build of Lens Kubernetes IDE
+cask "openlens"
+# Visual client for Helix Core
+cask "p4v"
+# CLI for command-line API management on Postman
+cask "postman-cli"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin@21"
+# Open-source code editor
+cask "visual-studio-code"
 vscode "aaron-bond.better-comments"
 vscode "abdullahceylan.vscode-react-component-generator"
 vscode "adpyke.codesnap"
@@ -38,8 +97,10 @@ vscode "artlaman.chalice-color-theme"
 vscode "artlaman.chalice-icon-theme"
 vscode "astro-build.astro-vscode"
 vscode "asvetliakov.vscode-neovim"
+vscode "atlassian.atlascode"
 vscode "azemoh.one-monokai"
 vscode "bceskavich.theme-dracula-at-night"
+vscode "biomejs.biome"
 vscode "bmarkovic.haproxy"
 vscode "bradlc.vscode-tailwindcss"
 vscode "ccimage.jsonviewer"
@@ -47,6 +108,8 @@ vscode "cdonohue.quill-icons"
 vscode "christian-kohler.path-intellisense"
 vscode "coderabbit.coderabbit-vscode"
 vscode "contractshark.solidity-lang"
+vscode "cweijan.dbclient-jdbc"
+vscode "cweijan.vscode-database-client2"
 vscode "cweijan.vscode-office"
 vscode "daltonmenezes.aura-theme"
 vscode "damirka.move-syntax"
@@ -66,11 +129,9 @@ vscode "firsttris.vscode-jest-runner"
 vscode "fisheva.eva-theme"
 vscode "formulahendry.auto-rename-tag"
 vscode "gegeke.node-modules-navigation"
-vscode "github.copilot"
-vscode "github.copilot-chat"
-vscode "github.copilot-labs"
 vscode "github.github-vscode-theme"
 vscode "github.vscode-pull-request-github"
+vscode "gitlab.gitlab-workflow"
 vscode "hashicorp.terraform"
 vscode "hbenl.vscode-mocha-test-adapter"
 vscode "hbenl.vscode-test-explorer"
@@ -79,7 +140,9 @@ vscode "jasonnutter.search-node-modules"
 vscode "johnnierocket.rocket-theme"
 vscode "jtr.vscode-position"
 vscode "juanblanco.solidity"
+vscode "kevinrose.vsc-python-indent"
 vscode "lihui.vs-color-picker"
+vscode "local.codex-gitlab-review"
 vscode "lokalise.i18n-ally"
 vscode "luis.console-log"
 vscode "macieklad.tailwind-sass-syntax"
@@ -90,6 +153,7 @@ vscode "miguelsolorio.symbols"
 vscode "monokai.theme-monokai-pro-vscode"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-playwright.playwright"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
@@ -104,11 +168,15 @@ vscode "naumovs.color-highlight"
 vscode "nomicfoundation.hardhat-solidity"
 vscode "oliversturm.fix-json"
 vscode "onflow.cadence"
+vscode "openai.chatgpt"
+vscode "openai.codex-audio"
 vscode "orta.vscode-jest"
 vscode "pkief.material-icon-theme"
 vscode "pkief.material-product-icons"
 vscode "pomber.git-file-history"
 vscode "qufiwefefwoyn.kanagawa"
+vscode "redhat.java"
+vscode "redhat.vscode-yaml"
 vscode "rifi2k.format-html-in-php"
 vscode "ritwickdey.liveserver"
 vscode "rvest.vs-code-prettier-eslint"
@@ -117,6 +185,7 @@ vscode "sainoba.px-to-rem"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "simonsiefke.svg-preview"
 vscode "softwaredotcom.swdc-vscode"
+vscode "sst-dev.opencode"
 vscode "statelyai.stately-vscode"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "stylelint.vscode-stylelint"
@@ -125,7 +194,17 @@ vscode "tintinweb.vscode-solidity-language"
 vscode "uloco.theme-bluloco-dark"
 vscode "uloco.theme-bluloco-light"
 vscode "unifiedjs.vscode-mdx"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vonalbert.vscode-darcula-storm-theme"
+vscode "vscjava.migrate-java-to-azure"
+vscode "vscjava.vscode-gradle"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-java-upgrade"
+vscode "vscjava.vscode-maven"
 vscode "vue.volar"
 vscode "wakatime.vscode-wakatime"
 vscode "wallabyjs.wallaby-vscode"
@@ -133,3 +212,7 @@ vscode "yummygum.city-lights-icon-vsc"
 vscode "yzhang.markdown-all-in-one"
 vscode "zengfeng.lottie-preview"
 vscode "zhuangtongfa.material-theme"
+uv "specify-cli"
+npm "@fission-ai/openspec"
+npm "@google/gemini-cli"
+npm "sbo-component-library"
