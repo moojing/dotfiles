@@ -2,8 +2,21 @@
   "env": {
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
   },
-  "hooks": {},
-  "enabledPlugins": {
-    "figma@claude-plugins-official": true
-  }
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "EnterWorktree",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "input=$(cat); wt=$(printf '%s' \"$input\" | grep -oE '/[^\" ]+/\\.claude/worktrees/[^\" ]+' | head -1); [ -n \"$wt\" ] || wt=$(printf '%s' \"$input\" | jq -r '.cwd // empty'); case \"$wt\" in */.claude/worktrees/*) ;; *) exit 0 ;; esac; main=${wt%%/.claude/worktrees/*}; if [ -d \"$main/.vscode\" ] && [ -d \"$wt\" ] && [ ! -e \"$wt/.vscode\" ]; then cp -R \"$main/.vscode\" \"$wt/.vscode\" 2>/dev/null || true; fi",
+            "timeout": 10,
+            "statusMessage": "Copying .vscode into worktree"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {},
+  "tui": "fullscreen"
 }

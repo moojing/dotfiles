@@ -34,7 +34,6 @@
 
 [http]
     postBuffer = 157286400
-	sslVerify = false
 
 [filter "lfs"]
     clean = git-lfs clean -- %f

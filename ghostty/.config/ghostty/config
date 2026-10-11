@@ -1,0 +1,6 @@
+command = /opt/homebrew/bin/fish --login
+
+# Cursor shaders (https://github.com/sahaj-b/cursor-shaders)
+custom-shader = sahajb_cursor_shaders/ghostty/cursor_warp.glsl
+custom-shader = sahajb_cursor_shaders/ghostty/ripple_cursor.glsl
+custom-shader-animation = always
