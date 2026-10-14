@@ -67,6 +67,8 @@ brew "z"
 brew "zbar"
 # General-purpose lossless data-compression library
 brew "zlib"
+# Prompt theme engine for any shell
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode", trusted: true
 # Enable Windows-like alt-tab
@@ -79,12 +81,8 @@ cask "jordanbaird-ice"
 cask "meld"
 # Open source build of Lens Kubernetes IDE
 cask "openlens"
-# Visual client for Helix Core
-cask "p4v"
 # CLI for command-line API management on Postman
 cask "postman-cli"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin@21"
 # Open-source code editor
 cask "visual-studio-code"
 vscode "aaron-bond.better-comments"
@@ -142,7 +140,6 @@ vscode "jtr.vscode-position"
 vscode "juanblanco.solidity"
 vscode "kevinrose.vsc-python-indent"
 vscode "lihui.vs-color-picker"
-vscode "local.codex-gitlab-review"
 vscode "lokalise.i18n-ally"
 vscode "luis.console-log"
 vscode "macieklad.tailwind-sass-syntax"
